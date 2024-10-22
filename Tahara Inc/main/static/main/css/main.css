@@ -1,0 +1,171 @@
+/* Задаем светлый фон для body */
+body {
+    background: #f8f9fa; /* Светлый фон */
+    color: #343a40; /* Текст темно-серого цвета */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для бокового меню */
+aside {
+    float: left;
+    background: #ffffff; /* Светлый фон */
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #343a40; /* Темный текст */
+    border-right: 5px solid #ced4da; /* Светлая граница */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Легкая тень для боковой панели */
+}
+
+/* Центрируем логотип относительно надписи "Навигация" */
+aside img {
+    display: block; /* Убираем float */
+    margin: 0 auto; /* Центрируем по горизонтали */
+    width: 250px; /* Размер картинки */
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    color: #007bff; /* Синий цвет для логотипа */
+}
+
+/* Центрируем текст "Навигация" */
+aside h3 {
+    text-align: center; /* Выравниваем по центру */
+    margin-top: 5px; /* Уменьшаем отступ сверху для более аккуратного вида */
+    font-size: 28px;
+    color: #007bff;
+}
+
+/* Убираем маркеры списка и центрируем элементы */
+aside ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Центрируем содержимое списка */
+}
+
+/* Стили для элементов списка */
+aside ul li {
+    display: block;
+    margin-top: 20px;
+}
+
+/* Стили для ссылок */
+aside ul li a {
+    font-size: 22px; /* Увеличиваем размер текста */
+    display: inline-block;
+    padding: 10px 15px;
+    color: #343a40;
+    text-decoration: none;
+    transition: all 0.5s ease; /* Плавный переход для всех свойств */
+    position: relative; /* Для смещения активной ссылки */
+    transform: translateX(0); /* Исходное положение */
+}
+
+/* Увеличенные иконки с отступом */
+aside ul li a i {
+    font-size: 28px; /* Увеличиваем размер иконки */
+    margin-right: 10px;
+}
+
+/* Эффект наведения на ссылки */
+aside ul li a:hover {
+    color: #007bff; /* Синий цвет при наведении */
+    transform: scale(1.1); /* Легкое увеличение */
+}
+
+/* Активная ссылка */
+aside ul li a.active {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: default;
+    transform: translateX(10px); /* Смещение активной ссылки */
+    transition: all 0.5s ease; /* Плавный переход при активации */
+}
+
+/* Отключенная ссылка */
+aside ul li a.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    transform: scale(0.95); /* Уменьшаем масштаб для отключенной ссылки */
+    transition: all 0.5s ease; /* Плавный переход при отключении */
+}
+
+/* Ссылка "Выход" красного цвета */
+.logout-link {
+    color: #ff0000; /* Красный цвет */
+}
+
+.logout-link:hover {
+    color: #cc0000; /* Более темный красный при наведении */
+}
+
+/* Если активная, сделать фон красным и текст белым */
+.logout-link.active {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Стили для основного контента */
+main .features {
+    float: left;
+    color: #343a40; /* Темно-серый цвет текста */
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+/* Большой заголовок */
+main .features h1 {
+    font-size: 50px;
+    color: #007bff; /* Синий заголовок */
+}
+
+/* Параграфы с текстом */
+main .features p {
+    max-width: 600px;
+    margin: 30px auto;
+    color: #495057; /* Более светлый текст */
+}
+
+/* Стили для кнопок и других интерактивных элементов */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Анимация для плавного исчезновения и появления main */
+main {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+}

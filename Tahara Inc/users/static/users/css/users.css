@@ -1,0 +1,117 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+form input, form button, form a {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Стиль для контейнера формы */
+form {
+    background-color: #ffffff; /* Белый фон для контраста */
+    border: 1px solid #ced4da; /* Легкая граница */
+    border-radius: 10px; /* Округленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 50px auto; /* Центрируем форму по горизонтали */
+}
+
+/* Стили для заголовков форм */
+form h3 {
+    text-align: center; /* Центрируем текст заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    color: #007bff; /* Синий цвет текста */
+}
+
+/* Стиль для полей ввода */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%; /* Полная ширина поля */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    border: 1px solid #ced4da; /* Легкая граница */
+    border-radius: 5px; /* Округленные углы */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Легкая внутренняя тень */
+    transition: border-color 0.3s ease; /* Плавное изменение границы */
+}
+
+/* Эффект фокуса для полей ввода */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #007bff; /* Изменяем цвет границы на синий */
+    outline: none; /* Убираем стандартный фокус */
+}
+
+/* Стили для кнопок */
+form button {
+    width: 100%; /* Полная ширина кнопки */
+    padding: 10px;
+    background-color: #007bff; /* Синий фон */
+    color: #ffffff; /* Белый цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Округленные углы */
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+/* Эффект наведения на кнопку */
+form button:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+/* Стили для текста ссылки */
+form a {
+    display: block;
+    text-align: center; /* Центрируем текст ссылки */
+    margin-top: 15px; /* Отступ сверху */
+    color: #007bff; /* Синий цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* Эффект наведения на ссылку */
+form a:hover {
+    color: #0056b3; /* Более темный синий при наведении */
+}
+
+ul.messages {
+    list-style: none;
+    padding: 0;
+}
+
+ul.messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ul.messages li.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+ul.messages li.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}

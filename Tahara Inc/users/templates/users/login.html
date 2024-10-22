@@ -1,0 +1,24 @@
+{% extends 'users/template.html' %}
+
+{% block title %}Вход в систему{% endblock %}
+
+{% block aside %}
+<form method="POST" novalidate>
+    {% csrf_token %}
+    <h3>Логин</h3>
+    
+    <!-- Вывод сообщений об ошибках или успехе -->
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <input type="text" name="username" placeholder="Имя пользователя" value="{{ form.username.value }}" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <button type="submit">Вход в систему</button>
+    <a href="{% url 'register' %}">Зарегистрироваться</a>
+</form>
+{% endblock %}

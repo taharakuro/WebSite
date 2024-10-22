@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: avecoder
+      POSTGRES_USER: tahara
+      POSTGRES_PASSWORD: s8M#bx%919B#0f%P
+    networks:
+      - django_network
+
+  web:
+    image: python:3.11
+    command: >
+      sh -c "pip install -r ../requirements.txt &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/WebSite
+    working_dir: /WebSite/Tahara_Inc.
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    networks:
+      - django_network
+
+networks:
+  django_network:
+
+volumes:
+  postgres_data:
